@@ -14,7 +14,7 @@ services:
       - /path/to/paks:/paks
       - /path/to/rules:/rules
       - /path/to/config:/config
-    ports: 
+    ports:
       - 8000-8500:8000-8500/udp # instance ports start at 8000 and go up from there
       - 14000:14000/udp         # instance comm port
       - 7777:7777/udp           # game comm port
