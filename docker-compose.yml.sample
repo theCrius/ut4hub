@@ -1,8 +1,9 @@
 version: "3"
 services:
-  ut4hub: 
+  ut4hub:
     image: ut4hub
-    container_name: ut4hub 
+    container_name: ut4hub
+    restart: unless-stopped
     environment:
       - SERVERNAME="UT4 Docker Hub"
       - SERVERMOTD="A UT4 Docker Hub!"
