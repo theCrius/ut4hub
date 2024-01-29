@@ -2,18 +2,18 @@
 Docker image for a stock install of a UT4 hub
 
 # Build
-`docker build -t ut4hub .`
+Clone this repo with `git clone https://github.com/theCrius/ut4hub.git`, then run `chmod +x rebuild.sh` to grant permission to run to the script. Te build/rebuild simply run `./rebuild.sh`
 
 # Configuration 
 
 ## Directories
 Create a directory to hold some necessary files to launch the hub:
 
-- `/home/docker/ut4hub/config` 
-- `/home/docker/ut4hub/paks`
-- `/home/docker/ut4hub/rules`
+- `mkdir /home/$USER/ut4hub/config` 
+- `mkdir /home/$USER/ut4hub/paks`
+- `mkdir /home/$USER/ut4hub/rules`
 
-These folders can be anywhere and named anything, as long as they map to `/config`, `/paks`, and `/rules` in the volumes section of the docker-compose.yml file
+These folders *can be anywhere and named anything*, as long as they map to `/config`, `/paks`, and `/rules` in the volumes section of the docker-compose.yml file
 
 ### /config
 This directory should contain a file named `redirect.ini`. The file should contain `RedirectReferences` for whatever redirect server you're using. Example:
