@@ -1,5 +1,4 @@
 FROM ubuntu:20.04
-MAINTAINER dc (me@dc.wtf)
 ENV HUBROOT=/hub
 ENV CONFIGDIR=$HUBROOT/server/LinuxServer/UnrealTournament/Saved/Config/LinuxServer
 ENV RULESDIR=$HUBROOT/server/LinuxServer/UnrealTournament/Saved/Config/Rulesets
