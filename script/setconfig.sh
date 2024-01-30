@@ -57,7 +57,7 @@ echo MaxClientRate=$SERVERNETSPEED >> $ENGINECFG
 echo >> $ENGINECFG
 
 # Master Server Connections
-if test -f "$MASTERSERVERCONFIG"; then
+if test -f $MASTERSERVERCONFIG; then
     echo "Master Server config found. Adding..."
     MasterServerConfig=`cat $MASTERSERVERCONFIG`
     echo $MasterServerConfig >> $ENGINECFG

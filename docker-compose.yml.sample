@@ -9,7 +9,7 @@ services:
       - SERVERMOTD="A UT4 Docker Hub!"
       - SERVERRCON="asdf1234"
       - LOBBYPASSWORD=""
-      - MASTERSERVERCONFIG="/config/masterserver.ini" #remove this line if you don't want to register to a master server
+      - MASTERSERVERCONFIG=/config/masterserver.ini #remove this line if you don't want to register to a master server
       - MAXPLAYERLOBBY=20    #default 30
       - SERVERTICKRATE=120   #default 90, max 120
       - SERVERNETSPEED=24000 #default 24000, max 24000
