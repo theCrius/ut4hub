@@ -57,10 +57,11 @@ echo MaxClientRate=$SERVERNETSPEED >> $ENGINECFG
 echo >> $ENGINECFG
 
 # Master Server Connections
-if test -f $MASTERSERVERCONFIG; then
+MASTERSERVERCONFIGPATH=echo $MASTERSERVERCONFIG | sed 's/"//g'
+if test -f ($MASTERSERVERCONFIGPATH); then
     echo "Master Server config found. Adding..."
-    MasterServerConfig=`cat $MASTERSERVERCONFIG`
-    echo $MasterServerConfig >> $ENGINECFG
+    MasterServerConfigVal=`cat $MASTERSERVERCONFIGPATH`
+    echo $MasterServerConfigVal >> $ENGINECFG
     echo >> $ENGINECFG
     echo "Master Server config added."
 else
