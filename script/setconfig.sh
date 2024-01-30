@@ -22,11 +22,12 @@ echo "Setting Game.ini defaults"
 
 #UTLobbyGameMode
 echo [/Script/UnrealTournament.UTLobbyGameMode] >> $GAMECFG
-echo LobbyPassword= >> $GAMECFG
+echo LobbyPassword=$LOBBYPASSWORD >> $GAMECFG
 echo AutoLaunchGameMode= >> $GAMECFG
 echo AutoLaunchGameOptions= >> $GAMECFG
 echo AutoLaunchMap= >> $GAMECFG
-echo MaxPlayersInLobby=20 >> $GAMECFG
+echo MinPlayersToStart=2 >> $GAMECFG
+echo MaxPlayersInLobby=$MAXPLAYERLOBBY >> $GAMECFG
 echo >> $GAMECFG
 
 #-----------
