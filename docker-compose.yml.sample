@@ -8,7 +8,7 @@ services:
       - SERVERNAME="UT4 Docker Hub"
       - SERVERMOTD="A UT4 Docker Hub!"
       - SERVERRCON="asdf1234"
-      - LOBBYPASSWORD=""
+      - SERVERPASSWORD=""
       - MASTERSERVERURL=""   #leave empty if you don't want to register to a master server
       - MAXPLAYERLOBBY=20    #default 30
       - SERVERTICKRATE=120   #default 90, max 120
