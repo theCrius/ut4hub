@@ -26,7 +26,7 @@ echo LobbyPassword=$LOBBYPASSWORD >> $GAMECFG
 echo AutoLaunchGameMode= >> $GAMECFG
 echo AutoLaunchGameOptions= >> $GAMECFG
 echo AutoLaunchMap= >> $GAMECFG
-echo MinPlayersToStart=2 >> $GAMECFG
+echo MinPlayersToStart=1 >> $GAMECFG
 echo MaxPlayersInLobby=$MAXPLAYERLOBBY >> $GAMECFG
 echo >> $GAMECFG
 
