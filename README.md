@@ -17,15 +17,14 @@ These folders *can be anywhere and named anything*, as long as they map to `/con
 
 ### /config
 
-If you want to connect to a master server, you'll need to add a file with the additional configuration in `/config` and specify the full path+name in the `docker-compose.yml` file. Use the `/config/masterserver.ini.sample` as a guide.
-
-
 This directory should contain a file named `redirect.ini`. The file should contain `RedirectReferences` for whatever redirect server you're using. Example:
 
 ```
 RedirectReferences=(PackageName="DM-Alanis-WindowsNoEditor",PackageURLProtocol="https",PackageURL="example.com/redirect/DM-Alanis-WindowsNoEditor.pak",PackageChecksum="MD5SumOfAlanis")
 RedirectReferences=(PackageName="MutTeamSkins-WindowsNoEditor",PackageURLProtocol="https",PackageURL="example.com/redirect/MutTeamSkins-WindowsNoEditor.pak",PackageChecksum="MD5SumOfTeamSkins")
 ```
+
+If you want to connect to a master server, you'll need to add a file with the additional configuration. Use the `/config/masterserver.ini.sample` as a guide.
 
 ### /paks
 
