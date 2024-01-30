@@ -54,7 +54,14 @@ echo [/Script/OnlineSubsystemUtils.IpNetDriver] >> $ENGINECFG
 echo NetServerMaxTickRate=$SERVERTICKRATE >> $ENGINECFG
 echo MaxInternetClientRate=$SERVERNETSPEED >> $ENGINECFG
 echo MaxClientRate=$SERVERNETSPEED >> $ENGINECFG
+echo >> $ENGINECFG
 
+# Master Server Connections
+if test -f "$MASTERSERVERCONFIG"; then
+    MasterServerConfig=`cat $MASTERSERVERCONFIG`
+    echo $MasterServerConfig >> $ENGINECFG
+    echo >> $ENGINECFG
+fi
 #----------
 
 echo "Linking paks"

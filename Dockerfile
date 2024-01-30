@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 ENV HUBROOT=/hub
 ENV CONFIGDIR=$HUBROOT/server/LinuxServer/UnrealTournament/Saved/Config/LinuxServer
+ENV MASTERSERVERCONFIG=
 ENV RULESDIR=$HUBROOT/server/LinuxServer/UnrealTournament/Saved/Config/Rulesets
 ENV SERVERBIN=$HUBROOT/server/LinuxServer/Engine/Binaries/Linux
 ENV ENGINECFG=$CONFIGDIR/Engine.ini
