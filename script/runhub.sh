@@ -2,7 +2,7 @@
 
 cd $SERVERBIN
 
-ServerPassword=$(echo $SERVERPASSWORD | sed s/"//g)
+ServerPassword=$(echo $SERVERPASSWORD | sed 's/"//g')
 
 startHub() {
   ./UE4Server-Linux-Shipping UnrealTournament UT-Entry?game=lobby?ServerPassword=$ServerPassword
