@@ -57,13 +57,62 @@ echo MaxClientRate=$SERVERNETSPEED >> $ENGINECFG
 echo >> $ENGINECFG
 
 # Master Server Connections
-if test -f $MASTERSERVERCONFIG; then
-    echo "Master Server config found. Adding..."
-    echo $MASTERSERVERCONFIG >> $ENGINECFG
-    echo >> $ENGINECFG
-    echo "Master Server config added."
+if [[ -z "${MASTERSERVERURL}" ]]; then
+    echo "Master server URL not found. Skipping."
 else
-	echo "Master server config not found. Skipping."
+	echo "Master Server URL found. Adding configuration."
+
+    echo [OnlineSubsystemMcp.BaseServiceMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=entitlement-public-service-prod08.ol.epicgames.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo EngineName=UE4 >> $ENGINECFG
+    echo ServiceName=entitlement >> $ENGINECFG
+    echo GameName=UnrealTournament >> $ENGINECFG
+    echo >> $ENGINECFG
+    
+    echo [OnlineSubsystemMcp.GameServiceMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=ut-public-service-prod10.ol.epicgames.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo ServiceName=ut >> $ENGINECFG
+    echo GameName=UnrealTournament >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo [OnlineSubsystemMcp.AccountServiceMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=account-public-service-prod03.ol.epicgames.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo ServiceName=account >> $ENGINECFG
+    echo GameName=UnrealTournament >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo [OnlineSubsystemMcp.OnlineFriendsMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=friends-public-service-prod06.ol.epicgames.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo ServiceName=friends >> $ENGINECFG
+    echo GameName=UnrealTournament >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo [OnlineSubsystemMcp.PersonaServiceMcp] >> $ENGINECFG
+    echo ;Domain=persona-public-service-prod06.ol.epicgames.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo [OnlineSubsystemMcp.OnlineImageServiceMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=cdn1.unrealengine.com >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo [OnlineSubsystemMcp.ContentControlsServiceMcp] >> $ENGINECFG
+    echo Protocol=https >> $ENGINECFG
+    echo ;Domain=content-controls-prod.ol.epicgames.net >> $ENGINECFG
+    echo Domain=$MASTERSERVERURL >> $ENGINECFG
+    echo >> $ENGINECFG
+
+    echo "Master Server config added."
 fi
 #----------
 
