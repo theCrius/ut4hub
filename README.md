@@ -9,9 +9,9 @@ Clone this repo with `git clone https://github.com/theCrius/ut4hub.git`, then ru
 ## Directories
 Create a directory to hold some necessary files to launch the hub:
 
-- `mkdir /home/$USER/ut4hub/config` 
-- `mkdir /home/$USER/ut4hub/paks`
-- `mkdir /home/$USER/ut4hub/rules`
+- `mkdir -p /home/$USER/ut4hub/config` 
+- `mkdir -p /home/$USER/ut4hub/paks`
+- `mkdir -p /home/$USER/ut4hub/rules`
 
 These folders *can be anywhere and named anything*, as long as they map to `/config`, `/paks`, and `/rules` in the volumes section of the docker-compose.yml file
 
