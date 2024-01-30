@@ -57,10 +57,10 @@ echo MaxClientRate=$SERVERNETSPEED >> $ENGINECFG
 echo >> $ENGINECFG
 
 # Master Server Connections
-MASTERSERVERCONFIGPATH=echo $MASTERSERVERCONFIG | sed 's/"//g'
-if test -f ($MASTERSERVERCONFIGPATH); then
+MASTERSERVERCONFIG=$(echo "$MASTERSERVERCONFIG" | sed 's/"//g') # workaround for stupid docker componse adding double quotes
+if test -f ($MASTERSERVERCONFIG); then
     echo "Master Server config found. Adding..."
-    MasterServerConfigVal=`cat $MASTERSERVERCONFIGPATH`
+    MasterServerConfigVal=`cat $MASTERSERVERCONFIG`
     echo $MasterServerConfigVal >> $ENGINECFG
     echo >> $ENGINECFG
     echo "Master Server config added."
