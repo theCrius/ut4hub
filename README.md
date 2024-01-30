@@ -48,3 +48,41 @@ The following environment variables can be specified in docker-compose.yml
 Modify `docker-compose.yml.sample` with your settings 
 Launch with `docker-compose up -d`
 
+# RCON and console commands
+
+Rcon commands can be launched from within the game. After joining the hub (or a match), press ``` to open the console.
+
+Use `RconAuth PASSWORD` to authenticate as admin.
+
+These are the commands available:
+
+```
+RconMap NewMap[FString]
+RconNextMap NewMap[FString]
+RconKick NameOrUidStr[FString] bBan[bool] Reason[FString]
+RconExec Command[FString]
+RconAuth Password[FString]
+```
+
+RconExec Commands are:
+
+```
+AllAmmo
+AddBots [# of bots]
+ChangeTeam
+Ghost
+HudSettings
+KillBots
+Loaded
+Open [Map Name]
+RestartLevel
+Stat FPS
+SwitchTeam
+Suicide
+UnlimitedAmmo
+ViewPlayer [Name]
+ViewSelf
+Walk 
+```
+
+A console command that is useful to check for issues is `Stat fps`, doesn't need Rcon or admin to be run.
