@@ -24,8 +24,6 @@ RedirectReferences=(PackageName="DM-Alanis-WindowsNoEditor",PackageURLProtocol="
 RedirectReferences=(PackageName="MutTeamSkins-WindowsNoEditor",PackageURLProtocol="https",PackageURL="example.com/redirect/MutTeamSkins-WindowsNoEditor.pak",PackageChecksum="MD5SumOfTeamSkins")
 ```
 
-If you want to connect to a master server, you'll need to add a file with the additional configuration. Use the `/config/masterserver.ini.sample` as a guide.
-
 ### /paks
 
 This directory should only contain valid pak files for maps, mutators, gametypes, etc
