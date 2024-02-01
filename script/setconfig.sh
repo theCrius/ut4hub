@@ -34,7 +34,7 @@ echo >> $GAMECFG
 
 # UTGameMode
 echo [/Script/UnrealTournament.UTGameMode] >> $GAMECFG
-echo MapVoteTime=60 >> $GAMECFG
+echo MapVoteTime=30 >> $GAMECFG
 echo >> $GAMECFG
 
 #-----------
